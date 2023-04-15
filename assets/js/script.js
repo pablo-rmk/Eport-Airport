@@ -1,7 +1,6 @@
 
 $('document').ready(function () {
 
-    // alert('Estimado Pasajero: Recuerde que para abordar el avión debe tener a mano su pasaporte y boleto de embarque. Mantengase atento a los avisos mediante esta plataforma');
     $('.modal').modal('show');
     $('#flightNumber').text(Math.floor((Math.random() * 8999) + 1000));
     $('#terminalNumber').text(Math.floor((Math.random() * 10) + 10));
@@ -19,15 +18,15 @@ let fechaActual = () => {
 
     const fecha = new Date();
     let year = fecha.getFullYear();
-    let month = fecha.getMonth() + 1;
-    let day = fecha.getDay();
+    let month = parseInt(fecha.getMonth()) + 1;
+    let day = parseInt(fecha.getDay()) + 9;
 
-    if (month >= 1 && month < 10) {
-        month = '0' + month;
-    }
-    if (day >= 1 && day < 10) {
+    if (day < 10) {
         day = '0' + day;
-    }
+    };
+    if (month < 10) {
+        month = '0' + month;
+    };
 
     return `${day}-${month}-${year}`;
 
