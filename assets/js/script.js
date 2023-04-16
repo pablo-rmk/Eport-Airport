@@ -19,7 +19,7 @@ let fechaActual = () => {
     const fecha = new Date();
     let year = fecha.getFullYear();
     let month = parseInt(fecha.getMonth()) + 1;
-    let day = parseInt(fecha.getDay()) + 9;
+    let day = parseInt(fecha.getDate());
 
     if (day < 10) {
         day = '0' + day;
