@@ -19,37 +19,44 @@
 </head>
 
 <body>
-
+    <!-- Modal Alerta de Pasajero-->
     <div class="modal" tabindex="-1" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog">
             <div class="modal-content">
+                <!-- Contenido Modal -->
                 <div class="modal-body">
-                    <p style="font-size: 1vw; text-align: justify;">Estimado Pasajero: Recuerde que para abordar el avión debe tener a mano su pasaporte y boleto de
+                    <p style="font-size: 1vw; text-align: justify;">Estimado Pasajero: Recuerde que para abordar el
+                        avión debe tener a mano su pasaporte y boleto de
                         embarque. Mantengase atento a los avisos mediante esta plataforma.</p>
                 </div>
-                <div class="modal-footer"><button id="button" type="button" class="btn btn-primary">Close</button></div>
+                <!-- Boton Modal -->
+                <div class="modal-footer">
+                    <button id="button" type="button" class="btn btn-primary">Close</button>
+                </div>
             </div>
         </div>
     </div>
-
+    <!-- Mensaje de Titulo -->
     <div class="container" id="welcomeBox">
         <h1><b>Bienvenido a la plataforma <i>Eport</i></b></h1>
         <h3>Aquí podrá encontrar la información de vuelos más reciente en nuestro aeropuerto.</h3>
     </div>
-    <div class="container-fluid">
-        <div class="column" id="time">
+    <!-- -->
+    <div class="container-fluid row">
+        <div class="col" id="time">
             <h3>Hora:</h3>
-            <h1 id="insertTime">15:11</h1>
+            <h1 id="insertTime"></h1>
         </div>
-        <div class="column" id="date">
+        <div class="col" id="date">
             <h3>Fecha:</h3>
-            <h1 id="insertDate">30-12-2020</h1>
+            <h1 id="insertDate"></h1>
         </div>
     </div>
+
     <div class="container" id="flightBox">
         <h1><b>El vuelo más próximo:</b></h1>
-        <h3>Número de vuelo: <em id="flightNumber">1234</em></h3>
-        <h3>Terminal: <em id="terminalNumber">14</em></h3>
+        <h3>Número de vuelo: <em id="flightNumber"></em></h3>
+        <h3>Terminal: <em id="terminalNumber"></em></h3>
     </div>
 
     <script src="./assets/js/script.js"></script>

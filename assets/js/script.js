@@ -2,21 +2,21 @@
 $('document').ready(function () {
 
     $('.modal').modal('show');
+
     $('#flightNumber').text(Math.floor((Math.random() * 8999) + 1000));
     $('#terminalNumber').text(Math.floor((Math.random() * 10) + 10));
     $('#insertDate').text(fechaActual());
     $('#insertTime').text(horaActual());
+
     $('#button').click(function () {
         $('.modal').modal('hide')
     });
 });
 
-
-
-
 let fechaActual = () => {
 
     const fecha = new Date();
+
     let year = fecha.getFullYear();
     let month = parseInt(fecha.getMonth()) + 1;
     let day = parseInt(fecha.getDate());
@@ -28,7 +28,7 @@ let fechaActual = () => {
         month = '0' + month;
     };
 
-    return `${day}-${month}-${year}`;
+    return `${day}/${month}/${year}`;
 
 };
 
